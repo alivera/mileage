@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise 7.11</title>
+	<script type = "text/javascript">
+
+		var miles = parseInt(window.prompt("Enter the number of miles driven, -1 to Quit", "0"));		
+		var gallons = parseInt(window. prompt("Enter the number of gallons used, -1 to Quit", "0"));
+		var tankCounter = 0;
+		var totalMiles = 0; 
+		var totalGallons = 0;
+
+		while (miles > 0 && gallons > 0) {			
+			tankCounter = tankCounter + 1;
+			totalMiles = totalMiles + miles;
+			totalGallons = totalGallons + gallons;
+			var mpg = miles / gallons;
+			document.writeln("<p>Your gas economy for this trip is " + mpg + " miles per gallon.</P>");
+			miles = parseInt(window.prompt("Enter the number of miles driven, 0 to Quit", "0"));		
+			gallons = parseInt(window. prompt("Enter the number of gallons used, 0 to Quit", "0"));			
+		} //end while
+
+		//termination phase
+		if (tankCounter != 0) {
+			var totalMPG = totalMiles / totalGallons;			
+			document.writeln("<p>Your total gas economy is " + totalMPG + " miles per gallon.</P>");
+		} else {
+			document.writeln("<p>Mileage was not recorded</p>");
+		} //end if 
+			
+	</script> 
+</head>
+<body>	
+</body>
+</html>
